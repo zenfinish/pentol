@@ -1,0 +1,25 @@
+<%- include('./header.ejs') %>
+<div class="container">
+    <div class="col-md-6">     
+   
+            <form class="form-inline" action="/admin/detail-customer" method="POST">
+                
+                <select class="custom-select my-1 mr-sm-2" name="customerId">
+                    <option selected>Choose Customer</option>
+                    <% dataUser.forEach((element)=>{ %>
+                        <option value="<%= element.id %>"><%= element.name %></option>
+                    <% }) %> 
+                </select>
+
+                <select class="custom-select my-1 mr-sm-2" name="warehouse">
+                        <option selected>Avalaible Space    </option>
+                        <% wh.forEach((element2)=>{ %>
+                            <option  value="<%= element2.id %>"><%= element2.name %> Available Space <%= element2.capacity %></option>
+                        <% }) %> 
+                </select>
+                <button type="submit" class="btn btn-primary my-1">Check..</button>
+            </form>
+
+    </div>
+</div>
+<%- include('./footer.ejs') %>
