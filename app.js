@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+app.use(express.static('public'))
+
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const auth = require('./middlewares/auth.js');

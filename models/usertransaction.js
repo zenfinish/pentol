@@ -6,6 +6,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   UserTransaction.associate = function(models) {
     // associations can be defined here
+    UserTransaction.belongsTo(models.User)
+    UserTransaction.belongsTo(models.Warehouse)
   };
   return UserTransaction;
 };

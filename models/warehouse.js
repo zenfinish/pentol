@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Warehouse.associate = function(models) {
     // associations can be defined here
+    Warehouse.belongsToMany(models.User , {through: 'UserTransactions'})
   };
   return Warehouse;
 };
