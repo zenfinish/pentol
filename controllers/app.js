@@ -27,7 +27,7 @@ class AppController {
                     role: resolve.role
                 }
                 if(resolve.role === 0) {
-                    res.send('ini halaman admin')
+                    res.redirect('/admin')
                 }else if(resolve.role === 1) {
                     res.redirect('/customers')
                     // res.send('ini halaman customer')

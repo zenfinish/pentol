@@ -16,7 +16,7 @@ module.exports = {
         {
             name: 'Super Admin',
             email: 'admin@admin.com',
-            password: 'admin',
+            password: '3476e7c4e480ccdb6dd193f35238640da7aacef993843c2f40f51565ae42818d',
             role: 0,
             createdAt: new Date(),
             updatedAt: new Date()
@@ -24,7 +24,7 @@ module.exports = {
         {
             name: 'Guguk',
             email: 'guguk@guguk.com',
-            password: 'guguk',
+            password: 'd34ac0d690acdd0a72243b6706d38b4be521fc44bc6f8d61c2252ce061df4ede',
             role: 1,
             createdAt: new Date(),
             updatedAt: new Date()

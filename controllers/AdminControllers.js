@@ -10,7 +10,7 @@ class AdminController {
         })
         .then((dataWarehouse)=>{
             //res.send(dataWarehouse)
-            res.render("list" , {dataUser: dataUser, wh: dataWarehouse})
+            res.render("template_admin/list" , {dataUser: dataUser, wh: dataWarehouse})
         })
         .catch((err)=>{
             res.send(err)
