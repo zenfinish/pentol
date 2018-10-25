@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pentol (Penitipan Online)</h1>
+    <hr>
+    <h3>Silahkan Login.</h3>
+<form action="/cekLogin" method="POST">
+    <table>
+        <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td><input type="text" name="email" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+            <td colspan="3"><button type="submit">Masuk</button></td>
+        </tr>
+    </table>
+</form>
+<h3>Belum Punya Akun ? Silahkan Registrasi</h3>
+<form action="/register" method="POST">
+    <table>
+        <tr>
+            <td>Nama</td>
+            <td>:</td>
+            <td><input type="text" name="name" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td><input type="text" name="email" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td><input type="password" name="password" id="password1" /></td>
+        </tr>
+        <tr>
+            <td>Ulangi Password</td>
+            <td>:</td>
+            <td><input type="password" id="password2" /></td>
+        </tr>
+        <tr>
+            <td colspan="3"><button type="submit">Daftar</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
