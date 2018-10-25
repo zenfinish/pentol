@@ -12,14 +12,24 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('Users', [{
-        name: 'Super Admin',
-        email: 'admin@admin.com',
-        password: 'admin',
-        role: 0,
-        createdAt: new Date(),
-        updatedAt: new Date()
-    }], {});
+    return queryInterface.bulkInsert('Users', [
+        {
+            name: 'Super Admin',
+            email: 'admin@admin.com',
+            password: 'admin',
+            role: 0,
+            createdAt: new Date(),
+            updatedAt: new Date()
+        },
+        {
+            name: 'Guguk',
+            email: 'guguk@guguk.com',
+            password: 'guguk',
+            role: 1,
+            createdAt: new Date(),
+            updatedAt: new Date()
+        }
+    ], {});
 },
 
   down: (queryInterface, Sequelize) => {
