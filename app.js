@@ -1,16 +1,20 @@
 const express = require('express');
-const StudentRoute = require('./routes/students')
-const TestRoute = require('./routes/test')
-const bodyParser = require('body-parser');
-
 const app = express();
-app.set('view engine', 'ejs');
+const session = require('express-session')
 let port = 3000;
-
-// app.locals.helper = require('./helpers')
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'))
 app.listen(port,function(){
   console.log(`App running on port : ${port}`)
 })
-app.use('/students', StudentRoute)
+const bodyParser = require('body-parser');
+const AdminRoute = require('./routes/admin')
+const SessionRoute = require('./routes/session')
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'))
+app.use(session({
+  secret: 'haha'
+}))
+app.use('/admin', AdminRoute)
+app.use('/session', SessionRoute)
+
+// app.locals.helper = require('./helpers')
