@@ -6,4 +6,6 @@ router.get('/', AdminController.list)
 
 router.post('/detail-customer',AdminController.detail)
 
+router.get('/space',AdminController.space)
+
 module.exports = router
