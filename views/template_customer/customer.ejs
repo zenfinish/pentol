@@ -1,3 +1,24 @@
-<%- include('./template_customer/header.ejs') %>
-<h1>Ini Halaman Customer</h1>
-<%- include('./template_customer/footer.ejs') %>
+<%- include('./header.ejs') %>
+<h3>Data Stok Gudang</h3>
+<table border="1" cellpadding="5">
+    <tr>
+        <td>Id</td>
+        <td>Nama Gudang</td>
+        <td>Kapasitas</td>
+        <td>Action</td>
+    </tr>
+    <% resolve.forEach(function(data) {
+        let action = '<a href="/customers/'+data.id+'">Pesan</a>';
+        if(data.capacity === 0) {
+            action = '<span>Kapasitas Penuh</span>';
+        }
+    %>
+        <tr>
+            <td><%= data.id %></td>
+            <td><%= data.name %></td>
+            <td><%= data.capacity %></td>
+            <td><%- action %></td>
+        </tr>
+    <% }); %>
+</table>
+<%- include('./footer.ejs') %>

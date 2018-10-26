@@ -23,6 +23,7 @@ class AppController {
                 // res.send(resolve)
                 req.session.user = {
                     isLogin: true,
+                    UserId: resolve.id,
                     email: resolve.email,
                     role: resolve.role
                 }

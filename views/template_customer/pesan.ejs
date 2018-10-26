@@ -1,0 +1,35 @@
+<%- include('./header.ejs') %>
+<h3>Form Pesan Gudang</h3>
+<form action="/customers/<%= resolve.id %>" method="post">
+    <table border="1" cellpadding="5">
+        <tr>
+            <td>Id</td>
+            <td>:</td>
+            <td><%= resolve.id %></td>
+        </tr>
+        <tr>
+            <td>Nama</td>
+            <td>:</td>
+            <td><%= resolve.name %></td>
+        </tr>
+        <tr>
+            <td>Kapsitas</td>
+            <td>:</td>
+            <td><%= resolve.capacity %></td>
+        </tr>
+        <tr>
+            <td>Jumlah</td>
+            <td>:</td>
+            <td><input type="text" name="qty" /></td>
+        </tr>
+        <tr>
+            <td>Lama</td>
+            <td>:</td>
+            <td><input type="text" name="lama" /> Bulan</td>
+        </tr>
+        <tr>
+            <td colspan="3"><button type="submit">Pesan</button></td>
+        </tr>
+    </table>
+</form>
+<%- include('./footer.ejs') %>
